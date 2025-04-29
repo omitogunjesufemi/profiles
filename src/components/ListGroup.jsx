@@ -8,16 +8,16 @@ function ListGroup({ items, heading, onSelectItem }) {
             <h1>{heading}</h1>
             {items.length === 0 && <p>No items found</p>}
             <ul className="list-group">
-                {items.map((item, index) =>
-                    <li className={selectIndex === index ? 'list-group-item active' : 'list-group-item'}
-                        key={index}
+                {items.map((item, idx) =>
+                    <li className={selectIndex === idx ? 'list-group-item active' : 'list-group-item'}
+                        key={item.id}
                         onClick={() => {
-                            setSelectIndex(index);
+                            setSelectIndex(idx);
                             onSelectItem(item);
                         }
-                    }> {item}
+                    }> {item.name}
                     </li>
-                )};
+                )}
             </ul>
         </Fragment>
     );

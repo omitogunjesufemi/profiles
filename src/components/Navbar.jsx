@@ -1,22 +1,12 @@
-import Button from "./Button.jsx";
+import {Link} from "react-router-dom";
 
 function Navbar () {
     return (
-        <>
-            <nav className='navbar navbar-expand-lg bg-light'>
-                <form className='container-fluid' role='search'>
-                    <div className='container-sm d-inline-flex'>
-                        <a className='navbar-brand'>Profile</a>
-                        <div className='input-group'>
-                            <input className='form-control me-2' type='search' placeholder='e.g. JayMikee' aria-label='Search'/>
-                            <Button color={'outline-success'} type={'submit'}>
-                                Search
-                            </Button>
-                        </div>
-                    </div>
-                </form>
-            </nav>
-        </>
+        <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+            <div className='container justify-content-center'>
+                <Link to='/' className='navbar-brand' >Profile</Link>
+            </div>
+        </nav>
     );
 }
 
