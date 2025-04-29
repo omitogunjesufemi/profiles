@@ -85,14 +85,14 @@ function SearchResult() {
                     <li className='page-item'>
                         <a className='page-link' aria-label='Previous' onClick={handlePrev}>
                             <span aria-hidden='true'>&laquo;</span>
-                            {/*<span className='sr-only'>Previous</span>*/}
+                            <span className='sr-only' hidden='true'>Previous</span>
                         </a>
                     </li>
                     <li className='page-item active'><a className='page-link' >{pageIndex}</a></li>
                     <li className='page-item'>
                         <a className='page-link' aria-label='Next' onClick={handleNext}>
                             <span aria-hidden='true'>&raquo;</span>
-                            {/*<span className='sr-only'>Next</span>*/}
+                            <span className='sr-only' hidden='true'>Next</span>
                         </a>
                     </li>
                 </ul>
